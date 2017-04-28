@@ -8,7 +8,7 @@ using Seafood.Models;
 namespace Seafood.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170428194457_Initial")]
+    [Migration("20170428211035_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,6 +173,24 @@ namespace Seafood.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Seafood.Models.Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("ImagePath");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole")
@@ -208,6 +226,13 @@ namespace Seafood.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Seafood.Models.Post", b =>
+                {
+                    b.HasOne("Seafood.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
         }
     }

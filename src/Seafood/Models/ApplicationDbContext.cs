@@ -14,7 +14,6 @@ namespace Seafood.Models
         {
             base.OnModelCreating(builder);
         }
-        public DbSet<Post> Posts { get; set; }
 
     }
 }
