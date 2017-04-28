@@ -1,12 +1,12 @@
 # _Son of Cod Seafood_
 
-#### _Seafood Website, Epicodus .NET Week 2 Code Review, 4.21.17_
+#### _Seafood Website, Epicodus .NET Week 2 Code Review, 4.28.17_
 
 #### By _**Caitlin Hines**_
 
 ## Description
 
-_This application will allow users to: see a home page and add their email to a mailing list. I will also allow admins to securely log into the site and create/edit posts, see emails on mailing list, and add other admins.
+This application will allow users to: see a home page and add their email to a mailing list. I will also allow admins to securely log into the site and create/edit posts, see emails on mailing list, and add other admins.
 
 
 ## Support and contact details
