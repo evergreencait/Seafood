@@ -5,22 +5,23 @@ using Microsoft.AspNetCore.Authorization;
 using Seafood.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace Seafood.Controllers
 {
     [Authorize]
     public class PostsController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly AdminDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public PostsController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
+        public PostsController(UserManager<ApplicationUser> userManager, AdminDbContext db)
         {
             _userManager = userManager;
             _db = db;
         }
 
-        public IActionResult AllQuestions()
+        public IActionResult AllPosts()
         {
             return View(_db.Posts.ToList());
         }
@@ -45,6 +46,20 @@ namespace Seafood.Controllers
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             return View(_db.Posts.Where(x => x.User.Id == currentUser.Id));
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var thisPost = _db.Posts.FirstOrDefault(items => items.Id == id);
+            return View(thisPost);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Post post)
+        {
+            _db.Entry(post).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

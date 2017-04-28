@@ -7,7 +7,7 @@ using Seafood.Models;
 
 namespace Seafood.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(AdminDbContext))]
     [Migration("20170428211035_Initial")]
     partial class Initial
     {

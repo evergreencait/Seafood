@@ -9,6 +9,7 @@
         {
             <h4>@Html.DisplayFor(modelPost => listPost.Description)</h4>
             <img src="@Html.DisplayFor(modelProduct => listPost.ImagePath)" />
+            <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
         }
 }
 else

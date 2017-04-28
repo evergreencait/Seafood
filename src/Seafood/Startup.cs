@@ -24,10 +24,10 @@ namespace Seafood
         {
             services.AddMvc();
             services.AddEntityFramework()
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<AdminDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<AdminDbContext>()
                 .AddDefaultTokenProviders();
         }
 

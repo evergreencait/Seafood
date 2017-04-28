@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Seafood.Models
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class AdminDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Post> Posts { get; set; }
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public AdminDbContext(DbContextOptions options) : base(options)
         {
 
         }

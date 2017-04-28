@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Son of Cod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Seafood.Models.Post>
+
+<html>
+<head>
+    <title>Son of Cod</title>
+</head>
+<body>
+        <h2>Welcome to Son of Cod Newsletter!</h2>
+        
+            @foreach (var listPost in Model)
+            {
+                <h1>@Html.DisplayFor(modelBear => listPost.Description)</h1>
+                <h1>@Html.DisplayFor(modelBear => listPost.ImagePath)</h1>
+            }
+   
+
+</body>
+</html>

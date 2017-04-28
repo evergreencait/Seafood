@@ -208,7 +208,7 @@ C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Contr
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428211035_Initial.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428211035_Initial.Designer.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationDbContext.cs
+C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\AdminDbContext.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationUser.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\Post.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\ViewModels\LoginViewModel.cs

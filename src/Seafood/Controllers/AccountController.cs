@@ -8,11 +8,11 @@ namespace Seafood.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly AdminDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AdminDbContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -40,7 +40,7 @@ namespace Seafood.Controllers
             }
             else
             {
-                return View();
+                return View("Newsletter.Index");
             }
         }
 
