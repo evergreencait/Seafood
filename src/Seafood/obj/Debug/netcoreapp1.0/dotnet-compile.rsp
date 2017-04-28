@@ -204,10 +204,12 @@
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Program.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Startup.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Controllers\AccountController.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Controllers\MailingsController.cs
+C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Controllers\MailingController.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Controllers\PostsController.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428211035_Initial.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428211035_Initial.Designer.cs
+C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428231604_Mailing.cs
+C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428231604_Mailing.Designer.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\AdminDbContext.cs
 C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationUser.cs

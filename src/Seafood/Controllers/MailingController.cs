@@ -10,12 +10,12 @@ using Microsoft.EntityFrameworkCore;
 namespace Seafood.Controllers
 {
     [Authorize]
-    public class MailingsController : Controller
+    public class MailingController : Controller
     {
         private readonly AdminDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public MailingsController(UserManager<ApplicationUser> userManager, AdminDbContext db)
+        public MailingController(UserManager<ApplicationUser> userManager, AdminDbContext db)
         {
             _userManager = userManager;
             _db = db;
@@ -40,7 +40,7 @@ namespace Seafood.Controllers
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
-            return View(_db.Posts.Where(x => x.User.Id == currentUser.Id));
+            return View(_db.Mailings.Where(x => x.User.Id == currentUser.Id));
         }
     }
 }

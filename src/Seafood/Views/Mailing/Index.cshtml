@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Seafood.Models.Post>
+﻿@model IEnumerable<Seafood.Models.Mailing>
 
 <h2>Here is the newsletter mailing list</h2>
 <hr />
@@ -7,7 +7,7 @@
 {
     @foreach (var listMailing in Model)
     {
-        <h4>@Html.DisplayFor(modelMailing => listMailing.Description)</h4>
+        <h4>@Html.DisplayFor(modelMailing => listMailing.Email)</h4>
     }
 }
 else
