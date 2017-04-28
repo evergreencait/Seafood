@@ -40,7 +40,7 @@ namespace Seafood.Controllers
             }
             else
             {
-                return View("Newsletter.Index");
+                return View("Index");
             }
         }
 

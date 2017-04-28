@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Seafood.Models.Mailing
+
+<h2>Join our newsletter!</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Email)
+    @Html.EditorFor(model => model.Email)
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to List", "Index")

@@ -6,6 +6,7 @@ namespace Seafood.Models
     public class AdminDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Mailing> Mailings { get; set; }
         public AdminDbContext(DbContextOptions options) : base(options)
         {
 
