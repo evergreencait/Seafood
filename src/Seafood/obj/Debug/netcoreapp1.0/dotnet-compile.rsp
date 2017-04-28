@@ -1,5 +1,5 @@
---temp-output:C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\obj\Debug\netcoreapp1.0\
---out:C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\bin\Debug\netcoreapp1.0\Seafood.dll
+--temp-output:c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\obj\Debug\netcoreapp1.0\
+--out:c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\bin\Debug\netcoreapp1.0\Seafood.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -200,11 +200,13 @@
 --reference:C:\Users\Caitlin\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Caitlin\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Caitlin\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\obj\Debug\netcoreapp1.0\Seafooddotnet-compile.deps.json",Seafood.deps.json
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Program.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Startup.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428194457_Initial.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428194457_Initial.Designer.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationDbContext.cs
-C:\Users\Caitlin\Documents\Visual Studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationUser.cs
+--resource:"c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\obj\Debug\netcoreapp1.0\Seafooddotnet-compile.deps.json",Seafood.deps.json
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Program.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Startup.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Controllers\AccountController.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428194457_Initial.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Migrations\20170428194457_Initial.Designer.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Migrations\ApplicationDbContextModelSnapshot.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationDbContext.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\Models\ApplicationUser.cs
+c:\Users\Caitlin\documents\visual studio 2015\Projects\Seafood\src\Seafood\ViewModels\RegisterViewModel.cs
