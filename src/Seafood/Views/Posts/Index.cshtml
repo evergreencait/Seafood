@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Seafood.Models.Post>
 
-<h2>Here is your list of posts in the newsletter, @User.Identity.Name</h2>
+<h2>Son of Cod Landing Page</h2>
 <hr />
 
 @if (Model.Any())
@@ -9,7 +9,6 @@
         {
             <h4>@Html.DisplayFor(modelPost => listPost.Description)</h4>
             <img src="@Html.DisplayFor(modelProduct => listPost.ImagePath)" />
-            <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
         }
 }
 else
@@ -17,4 +16,11 @@ else
     <p>No posts have been added yet!</p>
 }
 
-@Html.ActionLink("Create new", "Create")
+@if (User.Identity.IsAuthenticated)
+{
+    @foreach (var listPost in Model)
+    {
+        <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
+    }
+    <p>@Html.ActionLink("Create new", "Create")</p>
+}

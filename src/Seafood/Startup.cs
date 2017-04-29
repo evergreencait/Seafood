@@ -24,10 +24,10 @@ namespace Seafood
         {
             services.AddMvc();
             services.AddEntityFramework()
-                .AddDbContext<AdminDbContext>(options =>
+                .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<AdminDbContext>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
         }
 
@@ -38,7 +38,7 @@ namespace Seafood
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    template: "{controller=Posts}/{action=Index}/{id?}");
             });
             app.Run(async (context) =>
             {
