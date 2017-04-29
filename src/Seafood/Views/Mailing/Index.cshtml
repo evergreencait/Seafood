@@ -1,18 +1,22 @@
 ﻿@model IEnumerable<Seafood.Models.Mailing>
 
-<h2>Here is the newsletter mailing list</h2>
+<h2>Join Our Mailing List!</h2>
 <hr />
+
 
 @if (Model.Any())
 {
-    @foreach (var listMailing in Model)
+    @if (User.Identity.IsAuthenticated)
     {
-        <h4>@Html.DisplayFor(modelMailing => listMailing.Email)</h4>
+        @foreach (var listPost in Model)
+        {
+            <h4>@Html.DisplayFor(modelPost => listPost.Email)</h4>
+
+        }
     }
 }
-else
-{
-    <p>No emails have been added yet!</p>
-}
 
-@Html.ActionLink("Create new", "Create")
+<p>@Html.ActionLink("Create new", "Create")</p>
+
+
+
