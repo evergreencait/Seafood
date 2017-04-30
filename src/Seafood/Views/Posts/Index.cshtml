@@ -4,28 +4,29 @@
 }
 
 @model IEnumerable<Seafood.Models.Post>
-
-<h2>Son of Cod Landing Page</h2>
-<hr />
-
-@if (Model.Any())
-{
+<div class="dock">
+    <h2 class="title">Son of Cod Seafood</h2>
+</div>
+    @if (Model.Any())
+    {
         @foreach (var listPost in Model)
         {
             <h4>@Html.DisplayFor(modelPost => listPost.Description)</h4>
             <img src="@Html.DisplayFor(modelProduct => listPost.ImagePath)" />
         }
-}
-else
-{
-    <p>No posts have been added yet!</p>
-}
+    }
+    else
+    {
+     <p> No posts have been added yet!</p>
+    }
 
-@if (User.Identity.IsAuthenticated)
-{
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>@Html.ActionLink("Create new", "Create")</p>
     @foreach (var listPost in Model)
     {
         <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
     }
-    <p>@Html.ActionLink("Create new", "Create")</p>
+     
 }
+
