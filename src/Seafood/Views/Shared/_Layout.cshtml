@@ -23,7 +23,7 @@
                </div>
                 @if (User.Identity.IsAuthenticated)
             {
-                    @using (Html.BeginForm("LogOff", "Account", new { @class = "navbar-form navbar-right" }))
+                    @using (Html.BeginForm("LogOff", "Account", new { @class = "logout" }))
                 {
                         <input type="submit" class="btn btn-default" value="Log out" />
                     }
