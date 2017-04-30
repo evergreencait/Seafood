@@ -5,13 +5,13 @@
 
 @using System.Security.Claims
 
-<h2>Authentication with Identity</h2>
+<h2>Sign in successful</h2>
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
     <p>Hello @User.Identity.Name!</p>
 
-    <p>Add a new admin user</p>
+    <h3>Add a new admin user:</h3>
 
     <p>@Html.ActionLink("Add", "Register")</p>
 }

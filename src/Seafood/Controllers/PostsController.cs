@@ -38,5 +38,18 @@ namespace Seafood.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Edit(int id)
+        {
+            var thisPost = _db.Posts.FirstOrDefault(items => items.Id == id);
+            return View(thisPost);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Post post)
+        {
+            _db.Entry(post).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
