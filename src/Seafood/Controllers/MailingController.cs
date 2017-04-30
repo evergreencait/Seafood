@@ -10,13 +10,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Seafood.Controllers
-{ 
-    public class MailingsController : Controller
+{
+    public class MailingController : Controller
     {
         private readonly ApplicationDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public MailingsController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
+        public MailingController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
         {
             _userManager = userManager;
             _db = db;
