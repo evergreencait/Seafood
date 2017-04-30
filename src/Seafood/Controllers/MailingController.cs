@@ -1,22 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Seafood.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Linq;
+using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Seafood.Controllers
-{
-    public class MailingController : Controller
+{ 
+    public class MailingsController : Controller
     {
-        // GET: /<controller>/
-        private ApplicationDbContext db = new ApplicationDbContext();
-        public IActionResult Index()
+        private readonly ApplicationDbContext _db;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public MailingsController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
         {
-            return View(db.Mailings.ToList());
+            _userManager = userManager;
+            _db = db;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(_db.Mailings.ToList());
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Mailing mailing)
+        {
+            _db.Mailings.Add(mailing);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

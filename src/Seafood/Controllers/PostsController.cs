@@ -1,34 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Seafood.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Linq;
+using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Seafood.Controllers
 {
     public class PostsController : Controller
     {
-        // GET: /<controller>/
-        private ApplicationDbContext db = new ApplicationDbContext();
-        public IActionResult Index()
+        private readonly ApplicationDbContext _db;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public PostsController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
         {
-            return View(db.Posts.ToList());
+            _userManager = userManager;
+            _db = db;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(_db.Posts.ToList());
         }
 
         public IActionResult Create()
         {
             return View();
         }
-
         [HttpPost]
         public IActionResult Create(Post post)
         {
-            db.Posts.Add(post);
-            db.SaveChanges();
+            _db.Posts.Add(post);
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
     }

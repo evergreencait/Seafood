@@ -35,7 +35,7 @@ namespace Seafood.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Test");
+                return RedirectToAction("Index","Posts");
             }
             else
             {
