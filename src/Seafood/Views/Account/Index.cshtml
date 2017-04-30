@@ -10,6 +10,10 @@
 @if (User.Identity.IsAuthenticated)
 {
     <p>Hello @User.Identity.Name!</p>
+
+    <p>Add a new admin user</p>
+
+    <p>@Html.ActionLink("Add", "Register")</p>
 }
 else
 {
