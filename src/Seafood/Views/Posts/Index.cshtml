@@ -11,22 +11,21 @@
     {
         @foreach (var listPost in Model)
         {
-            <h4>@Html.DisplayFor(modelPost => listPost.Description)</h4>
+            <h2>@Html.DisplayFor(modelPost => listPost.Description)</h2>
             <img src="@Html.DisplayFor(modelProduct => listPost.ImagePath)" />
+            @if (User.Identity.IsAuthenticated)
+            {
+       
+                    <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
+                
+            }
         }
     }
-    else
-    {
-     <p> No posts have been added yet!</p>
-    }
+  
 
     @if (User.Identity.IsAuthenticated)
     {
         <p>@Html.ActionLink("Create new", "Create")</p>
-    @foreach (var listPost in Model)
-    {
-        <p>@Html.ActionLink("Edit", "Edit", new { id = listPost.Id })</p>
-    }
      
 }
 
