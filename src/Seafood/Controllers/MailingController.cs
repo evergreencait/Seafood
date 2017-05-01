@@ -36,7 +36,7 @@ namespace Seafood.Controllers
         {
             _db.Mailings.Add(mailing);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Posts");
         }
     }
 }

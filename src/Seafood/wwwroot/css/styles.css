@@ -29,3 +29,8 @@ img {
     font-family: 'Lobster', cursive;
     
 }
+
+.postImg {
+    text-align: center;
+    background-color: red;
+}

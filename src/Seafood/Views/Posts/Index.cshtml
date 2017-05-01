@@ -12,7 +12,9 @@
         @foreach (var listPost in Model)
         {
             <h2>@Html.DisplayFor(modelPost => listPost.Description)</h2>
+            <div class="postImg">
             <img src="@Html.DisplayFor(modelProduct => listPost.ImagePath)" />
+            </div>
             @if (User.Identity.IsAuthenticated)
             {
        
